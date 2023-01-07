@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Scrolling Website | Vanilla Javascript</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="images/stars.png" id="stars">
+        <img src="images/moon.png" id="moon">
+        <img src="images/mountain_behind.png" id="mountain_behind">
+        <h2 id="text">SELENO</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="images/mountain_front.png" id="mountain_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Selenophile</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam explicabo, dolores eos, ratione sapiente deserunt eius laborum cupiditate exercitationem suscipit tenetur ut excepturi placeat ipsa in omnis veniam impedit totam! Itaque atque voluptates odio corrupti aperiam, at consequatur nostrum nulla dignissimos magnam a, consequuntur minus quaerat odit alias temporibus culpa!
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur dicta cupiditate adipisci neque provident quis deserunt accusantium molestiae, officia voluptatibus minus minima ipsam natus quas, fugiat possimus dolorum dolor animi expedita sapiente culpa, error ratione voluptas! Sed sit atque ex at amet eos. Ipsam omnis suscipit commodi blanditiis modi porro?
+
+            <br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe eius repudiandae minus illum molestias at magnam perspiciatis culpa quis ipsa voluptate ut temporibus mollitia libero quisquam odio quos harum tempora veniam, dolor blanditiis deserunt accusamus optio consectetur? Repudiandae temporibus tempora voluptate sit commodi placeat quos accusamus pariatur consequatur eum numquam nesciunt iusto hic veritatis laudantium magni sint, corrupti reprehenderit ad itaque dolore, reiciendis quisquam obcaecati? Voluptate facere ducimus voluptates fuga fugiat est distinctio, quae libero mollitia! Nemo, eum. Cum odio officia similique mollitia unde nemo animi maxime, iure repudiandae deleniti, earum officiis magnam esse vitae, fugit minima commodi quasi explicabo?
+
+            <br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia mollitia molestias, incidunt delectus laboriosam facilis ipsum, asperiores quaerat quas, assumenda ipsa. Et, provident laboriosam laudantium deleniti assumenda, ad tenetur doloribus atque consequatur velit reiciendis magnam iusto molestias nostrum iure voluptatum doloremque beatae eligendi? Id vel soluta ad odio velit inventore incidunt tempora, a minus magnam repellat hic veniam unde atque.
+
+            <br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe eius repudiandae minus illum molestias at magnam perspiciatis culpa quis ipsa voluptate ut temporibus mollitia libero quisquam odio quos harum tempora veniam, dolor blanditiis deserunt accusamus optio consectetur? Repudiandae temporibus tempora voluptate sit commodi placeat quos accusamus pariatur consequatur eum numquam nesciunt iusto hic veritatis laudantium magni sint, corrupti reprehenderit ad itaque dolore, reiciendis quisquam obcaecati? Voluptate facere ducimus voluptates fuga fugiat est distinctio, quae libero mollitia! Nemo, eum. Cum odio officia similique mollitia unde nemo animi maxime, iure repudiandae deleniti, earum officiis magnam esse vitae, fugit minima commodi quasi explicabo?
+
+            <br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe eius repudiandae minus illum molestias at magnam perspiciatis culpa quis ipsa voluptate ut temporibus mollitia libero quisquam odio quos harum tempora veniam, dolor blanditiis deserunt accusamus optio consectetur? Repudiandae temporibus tempora voluptate sit commodi placeat quos accusamus pariatur consequatur eum numquam nesciunt iusto hic veritatis laudantium magni sint, corrupti reprehenderit ad itaque dolore, reiciendis quisquam obcaecati? Voluptate facere ducimus voluptates fuga fugiat est distinctio, quae libero mollitia! Nemo, eum. Cum odio officia similique mollitia unde nemo animi maxime, iure repudiandae deleniti, earum officiis magnam esse vitae, fugit minima commodi quasi explicabo?
+        </p>
+    </div>
+     <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountain_behind = document.getElementById('mountain_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountain_front = document.getElementById('mountain_front');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function()
+        {
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountain_behind.style.top = value * 0.5 + 'px';
+            mountain_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.margintop = value * 1.5 + 'px';
+            btn.style.margintop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+     </script>
+</body>
+</html>
